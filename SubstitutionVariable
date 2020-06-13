@@ -1,0 +1,5 @@
+DECLARE
+ P_VC01 VARCHAR2(50) := &CHARGE; /*&CHARGEข้อความรับพารามิเตอร์*/
+BEGIN
+  BDMS_OUTPUT.PUT_LINE('PARAMETER : ' || P_VC01);
+END;
