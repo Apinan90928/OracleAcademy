@@ -1,0 +1,29 @@
+/*รูปแบบที่ 1*/
+DECLARE
+  X INTEGER(3) := 0;
+BEGIN
+ LOOP 
+ X := X+1;
+ DMBS_OUTPUT.PUT_LINE('X : ' || X);
+ EXIT WHEN X >= 10;
+ END LOOP;
+END;
+
+/*รูปแบบที่ 2*/
+DECLARE
+  X NUMBER := 0;
+  Y NUMBER;
+BEGIN
+  <<L1>> LOOP
+  X := X + 1 ;
+  DBMS_OUTPUT.PUT_LINE('OUTER');
+  Y := 0;
+    <<L2>> LOOP
+    Y := V + 1;
+    DBMS_OUTPUT.PUT_LINE('INNER');
+    EXIT L1 WHEN X = 2;
+    EXIT WHEN Y >= 10;
+    END LOOP;
+  EXIT WHEN X >= 10;
+  END LOOP;
+END;
