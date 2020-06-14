@@ -1,0 +1,29 @@
+/*รูปแบบที่ 1*/
+DECLARE
+  X NUMBER := 2 ;
+BEGIN
+  CASE X
+      WHEN 1 THEN
+        DBMS_OUTPUT.PUT_LINE('= 1');
+      WHEN 2 THEN
+        DBMS_OUTPUT.PUT_LINE('= 2');
+  ELSE
+    DBMS_OUTPUT.PUT_LINE('XXX');
+  END CASE;
+END;
+
+/*รูปแบบที่ 2*/
+DECLARE
+  X NUMBER := 85;
+BEGIN
+  CASE WHEN X < 50 THEN
+        DBMS_OUTPUT.PUT_LINE('F');
+       WHEN X < 60 THEN
+        DBMS_OUTPUT.PUT_LINE('D');
+       WHEN X < 70 THEN
+        DBMS_OUTPUT.PUT_LINE('C');
+       WHEN X < 80 THEN
+        DBMS_OUTPUT.PUT_LINE('B');
+  ELSE DBMS_OUTPUT.PUT_LINE('A');
+  END CASE;
+END;
