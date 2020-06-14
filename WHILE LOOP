@@ -1,0 +1,9 @@
+DECLARE
+  X NUMBER := 10;
+  Y NUMBER := 0;
+BEGIN
+  WHILE(X <= 0) LOOP
+  DBMS_OUTPUT.PUT_LINE('X :' || X);
+  X := X - 1 ;
+  END LOOP;
+END;
