@@ -1,0 +1,19 @@
+/*รูปแบบที่ 1*/
+DECLARE
+  SUM_X NUMBER := 0;
+BEGIN
+  FOR X IN 0..50 LOOP
+  DBMS_OUTPUT.PUT_LINE('X : ' || X);
+  SUM_X := SUM_X + X;
+  END LOOP;
+END;
+
+/*รูปแบบที่ 2*/
+DECLARE
+  SUM_X NUMBER := 0;
+BEGIN
+  FOR X IN REVERSE 10..20 LOOP
+  DBMS_OUTPUT.PUT_LINE('X : ' || X);
+  SUM_X := SUM_X + X;
+  END LOOP;
+END;
